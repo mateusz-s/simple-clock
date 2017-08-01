@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Share Tech Mono', monospace;
+	background-color: #EEEEEE;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+}
+
+.clock {
+	display: inline-block;
+	padding: 30px;
+	border: 15px solid #222222;
+	border-radius: 15px;
+	margin: auto;
+	font-size: 0;
+	color: #FFFFFF;
+	background-color: #ADD8E6;
+	position: relative;
+}
+
+.clock::before, .clock::after {
+	content: '';
+	height: 15px;
+	position: absolute;
+	z-index: -1;
+}
+
+.clock::before {
+	width: 50%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin: 0 auto;
+	background-color: #444444;
+	top: -30px;
+	left: 0;
+	right: 0;
+}
+
+.clock::after {
+	width: 20%;
+	background-color: #444444;
+	top: calc(100% + 15px);
+	left: 10px;
+	box-shadow: 185px 0 0 0 #444444;
+}
+
+.clock span {
+	display: inline-block;
+	font-size: 60px;
+}
+
+.clock .blink {
+	animation: fadeInOut 1s steps(1) infinite;
+	transform: translate(0, -6px);
+}
+
+.clock .second {
+	font-size: 30px;
+}
+
+@keyframes fadeInOut {
+  50% {opacity: 0;}
+}
