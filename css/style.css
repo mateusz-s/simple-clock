@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
 
+/* === 	GLOBAL STYLES === */
 * {
 	box-sizing: border-box;
 }
@@ -10,11 +11,13 @@ body {
 	background-color: #EEEEEE;
 }
 
+/* === 	ADDITIONAL STYLES === */
 .container {
 	display: flex;
 	height: 100vh;
 }
 
+/* === 	CLOCK STYLES === */
 .clock {
 	display: inline-block;
 	padding: 30px;
@@ -67,6 +70,7 @@ body {
 	font-size: 30px;
 }
 
+/* === 	ANIMATION KEYFRAMES === */
 @keyframes fadeInOut {
   50% {opacity: 0;}
 }
